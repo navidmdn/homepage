@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14247ef9-f272-48c4-a3f3-d005d2e96803" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/timeline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timeline.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/jackson/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/jackson/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="14247ef9-f272-48c4-a3f3-d005d2e96803" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +14,7 @@
   <component name="ProjectId" id="1RHMZOTeEBR8S8zfY1GQIYEqSVH" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../navidmdn.github.io" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -73,7 +51,7 @@
       <updated>1569319622268</updated>
       <workItem from="1569319623398" duration="2366000" />
       <workItem from="1569355284437" duration="1227000" />
-      <workItem from="1570442468908" duration="6866000" />
+      <workItem from="1570442468908" duration="7093000" />
     </task>
     <servers />
   </component>

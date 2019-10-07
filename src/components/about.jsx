@@ -19,6 +19,24 @@ export default class About extends Component {
                         solutions to online taxi fleet problems such as <b>supply/demand prediction, ETA estimation, ride sharing, dynamic pricing and smart taxi dispatch algorithms</b>
                     </p>
                     </div>
+
+                    <div className="about-desc">
+                        <br></br>
+                        <h2 className="colorlib-heading">Education</h2>
+                        <h4><b> University of Tehran ,  B.Sc. ,  Computer Engineering -Software
+                        </b></h4>
+                        <ul>
+                            <li>Cumulative GPA 3.70/4 (17.28/20) </li>
+                            <li>Won the <b>best undergraduate project award</b></li>
+                        </ul>
+                        <br></br>
+                        <h4><b> Borhan High School, Diploma, Math and Physics Discipline
+                        </b></h4>
+                        <ul>
+                        <li>Cumulative GPA 3.70/4 (17.28/20) </li>
+                        <li> Ranked 151 among near 300000 students in university entrance exam</li>
+                        </ul>
+                    </div>
                 </div>
                 </div>
             </div>
