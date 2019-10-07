@@ -21,8 +21,28 @@ export default class Timeline extends Component {
                         <i className="icon-pen2" />
                       </div>
                       <div className="timeline-label">
-                        <h2>Internship at Juniper <span>2019-present</span></h2>
-                        <p>I recently have joined the Juniper Networs as a Software Developer-Intern in the DevOps team. My major part of the work has been into the field of creating sustainable and flexible CI/CD (Continuous Integration & Continuous Development) pipelines which enables developers at Juniper to do rapid development. I am also exploring the role of container technology like Docker and container-orchrastation technologies like K8s, Swarm to create industry standard production environments.</p>
+                        <h2>Senior Machine Learning Engineer at <a href={'https://tap30.ir/'}>Tap30 </a><span>2018-present</span></h2>
+
+                        At tap30 we face several challenging and amazing problems every day. I am proud to be a <b>senior member of Tap30 AI team</b>.
+                        In our very first project we built the <b>first ride sharing service in Iran</b>. We designed state of the art <b>spatio-temporal models </b>
+                        to calculate the probability of finding a trip companion for ride sharing service. Moreover, we have built a <b>dynamic price
+                        calculation service based on supply and demand</b> to keep a <b>steady fulfillment rate</b> in our service. We've also created
+                        a powerful <b>ETA calculation service</b> _Estimated Time of Arrival_ service on top of <a href={'http://project-osrm.org/'}>OSRM</a>.
+
+                      </div>
+                    </div>
+
+                  </article>
+                  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                    <div className="timeline-entry-inner">
+                      <div className="timeline-icon color-5">
+                        <i className="icon-pen2" />
+                      </div>
+                      <div className="timeline-label">
+                        <h2>Internship at Viratech Co. <span>2016-2017</span></h2>
+                        <p>I was a backend developer at Viratech. We <b>designed and implemented enterprise organizational applications in Java. </b>
+                          I have worked on two projects there: Organizational <b>Email Management System</b> and <b>Online Organizational Storage</b> system.
+                        </p>
                       </div>
                     </div>
                   </article>
@@ -32,22 +52,16 @@ export default class Timeline extends Component {
                         <i className="icon-pen2" />
                       </div>
                       <div className="timeline-label">
-                        <h2>Undergraduation at DAIICT<span>2015-2019</span></h2>
-                        <p>I am pursuing my under-graduation studies with major in I.C.T.(Information & Communication Technology). I have taken courses like DSA, OOPs, Computer Networks, IOT, Web-Data Management over the years and have better understanding of these subjects.I have also been part of S.B.G.(Student Body Govenance) scince my first year of college.</p>
+                        <h2>BSc. in Computer Engineering at Tehran University <span>2014-2018</span></h2>
+                        <p>I have finished my under-graduation at Tehran University in Computer Engineering. During these four years I've been <b>teacher assistant </b>
+                          for courses such as <b>Advance Programming (Focused on teaching fundamentals of programming in C++), Data Structures, Design and Analysis of Algorithms</b>.
+                          I also have participated in some of graduate courses such as <b>Neural Networks, Introduction to Machine Learning,
+                          Graph theory and Deep Learning</b> to enhance my knowledge of machine learning.
+                        </p>
                       </div>
                     </div>
                   </article>
-                  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-5">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>Primary and Higher Education <span>2003-2015</span></h2>
-                        <p>I have completed my higher secondary education with major subjects as Physics,Chemistry & Maths with 91 merit. During my time at school, I have developed interest in solving complex problems of the fundamental physics which helped me to improve my understanding of any problem and also my mathematical skills to actually solve the problems.</p> 
-                      </div>
-                    </div>
-                  </article>
+
                   <article className="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
                     <div className="timeline-entry-inner">
                       <div className="timeline-icon color-none">
