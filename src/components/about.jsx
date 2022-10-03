@@ -15,8 +15,8 @@ export default class About extends Component {
                     <h2 className="colorlib-heading">Who Am I?</h2>
                     <p>My name is Navid Madani. I have received my BSc. in computer engineering at the <a href={'https://ece.ut.ac.ir/en'}> Department of Electrical and Computer Engineering,
                         University of Tehran </a>. <br></br>
-                    Currently a PhD student in Computer Science with a focus on Natural Language Processing and Com-
-                    putational Social Science. Former Machine Learning Engineer at Tapsi Co.
+                    Currently a PhD student in Computer Science with a focus on Natural Language Processing and
+                        Computational Social Science. Former Machine Learning Engineer at Tapsi Co.
                     Always looking for research opportunities to combine external knowledge with state of the art ML/DL
                     models. Representation learning, [knowledge based] question answering and offline RL are my main areas
                     of focus.
