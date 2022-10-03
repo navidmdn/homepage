@@ -14,15 +14,25 @@ export default class About extends Component {
                     <span className="heading-meta">About Me</span>
                     <h2 className="colorlib-heading">Who Am I?</h2>
                     <p>My name is Navid Madani. I have received my BSc. in computer engineering at the <a href={'https://ece.ut.ac.ir/en'}> Department of Electrical and Computer Engineering,
-                        University of Tehran </a>. <br></br>Currently I am a senior machine learning engineer and data
-                        scientist at <a href={'https://tap30.ir'}> Tap30 Co</a>  (online taxi fleet application like <b>Uber</b>) where we develop state of the art
-                        solutions to online taxi fleet problems such as <b>supply/demand prediction, ETA estimation, ride sharing, dynamic pricing and smart taxi dispatch algorithms</b>
+                        University of Tehran </a>. <br></br>
+                    Currently a PhD student in Computer Science with a focus on Natural Language Processing and Com-
+                    putational Social Science. Former Machine Learning Engineer at Tapsi Co.
+                    Always looking for research opportunities to combine external knowledge with state of the art ML/DL
+                    models. Representation learning, [knowledge based] question answering and offline RL are my main areas
+                    of focus.
                     </p>
                     </div>
 
                     <div className="about-desc">
                         <br></br>
                         <h2 className="colorlib-heading">Education</h2>
+                        <h4><b> University at Buffalo ,  PhD ,  Computer Science
+                        </b></h4>
+                        <ul>
+                            <li>Cumulative GPA 4.0/4.0 (17.28/20) </li>
+                            <li> Natural Language Processing with a focus on computational social science</li>
+                        </ul>
+                        <br></br>
                         <h4><b> University of Tehran ,  B.Sc. ,  Computer Engineering -Software
                         </b></h4>
                         <ul>
