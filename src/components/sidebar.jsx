@@ -20,7 +20,7 @@ export default class Sidebar extends Component {
                   <li><a href="#about" data-nav-section="about">About</a></li>
                   {/*<li><a href="#" data-nav-section="projects">Projects</a></li>
                   <li><a href="#" data-nav-section="blog">Blog</a></li>*/}
-                  <li><a href="#timeline" data-nav-section="timeline">Timeline</a></li>
+                  {/*<li><a href="#timeline" data-nav-section="timeline">Timeline</a></li>*/}
                 </ul>
               </div>
             </nav>
@@ -30,7 +30,7 @@ export default class Sidebar extends Component {
                 {/*<li><a href="https://twitter.com/ddbarochiya" target="_blank" rel="noopener noreferrer"><i className="icon-twitter2" /></a></li>*/}
                 {/*<li><a href="https://www.instagram.com/ddbarochiya/" target="_blank" rel="noopener noreferrer"><i className="icon-instagram" /></a></li>*/}
                 <li><a href="https://www.linkedin.com/in/navid-madani-167a92110/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin2" /></a></li>
-                {/*<li><a href="https://github.com/Dhruv34788" target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>*/}
+                <li><a href="https://github.com/navidmdn" target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
                 {/*<li><a href="https://medium.com/@dhruv.barochia34788" target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>*/}
               </ul>
             </nav>
