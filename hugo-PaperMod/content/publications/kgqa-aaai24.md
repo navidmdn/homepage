@@ -7,45 +7,45 @@ ShowToc: true
 TocOpen: true
 ---
 
-# Making Computers Understand Us Better: A Cool Trick with Questions and Answers
+# Making Computers Understand Us Better: A Cool Trick with Questions and Answers Over Knowledge Graphs
 
-Ever wondered how we can make computers understand our questions better, especially when we're asking about something super specific? Well, some smart folks at the University at Buffalo came up with a nifty way to do just that, and it involves teaching computers a bit of logic. Let's dive into what they did and why it's pretty awesome.
+Ever wondered it is not the responsibility of the LLM to come up with the reasoning and it might be better for the LLM to only understand the linguistic side of the question? This work tries to explore this aspect by separating reasoning from linguistics of the knowledge graph question answering task. **In this work we show that following this idea and using a T5-small model and only 1000 samples of MetaQA dataset (less than 0.01% of the training set) you can build a model that answers all of the test set questions perfectly.**
 
-![Placeholder for an image showing a confused computer and a light bulb moment](/personal.png)
+ For more details, find the paper and code here:
 
-## The Big Idea
 
-When we ask computers questions, especially about specific topics, they sometimes get a bit lost. It's like they know the words but don't quite get the story. The researchers thought, "What if we could make computers understand the logic behind our questions better?" So they combined two cool things: the way computers understand language and a type of logical programming that's almost like regular conversation.
+<div align="center">
+	<a href="https://github.com/navidmdn/logic_based_qa">
+	    <img src="/github-mark.png" width="40" height="40" alt="GitHub">
+	</a>
+	<a href="https://openreview.net/pdf?id=ohixFcMzEr">
+	    <img src="/paper.png" width="40" height="40" alt="Paper">
+	</a>
+</div>
 
-![Placeholder for an image illustrating the combination of language understanding and logical programming](image2.png)
+## The Idea
 
-## How They Did It
+At the heart of our method is the idea that delegating reasoning to an exact reasoning engine and using LLMs only to overcome linguistic nuances is the way to answer knowledge graph questions in a specific domain. Most of the previous work tried to find a distribution over the whole knowlege graph for the answer to a question but this work mainly proposes a neuro-symbolic approach that separates the task of comprehending the question and multi-hop reasoning.
 
-First up, they took questions that people might ask and turned them into something called Prolog queries. Prolog is a programming language that's all about logic and is pretty good at understanding rules and relationships. So, by translating our questions into Prolog, it's like giving the computer a roadmap to find the answers.
+## Our Approach
 
-### From Words to Logic
+Instead of asking the LLM to do everything at once, we try to delegate the task of reasoning steps to a logical programming language which is similar to a natural language syntax (Prolog in our case) and we leave the nuances of comprehending the question and transforming it to prolog language to a LLM. This way, we know for sure that if the language model is able to transform the question to query, then the rest of it is an exact solution that can't go wrong. 
 
-They started with a fancy tool (think of it as a super smart translator) that takes a question and flips it into a Prolog query. This tool got a crash course in understanding questions by practicing on a bunch of example questions related to movies.
+### Transforming questions to queries
 
-![Placeholder for an image of the translation process from natural language to Prolog query](image3.png)
+MetaQA dataset is a huge synthetic dataset of question answer pairs over a knowledge graph in movie domain. Each question is accomponied with a path connecting the entity in question to an answer in the knowledge graph. We wrote functions to translate these paths to prolog queries by defining a mapping between each relation and a first order predciate. Then we trained an encoder-decoder model (we experimented with T5) to translate the questions. 
 
-### Finding Answers with Logic
+### Representing the whole graph in predicate format
 
-Next, the computer uses these Prolog queries to sift through a bunch of movie facts and figures out the answers. The cool part is that it doesn't just give the answer but also shows how it got there, like showing its work in a math problem.
+We represented the whole graph using Prolog language and constructed predicates to show each triple in the graph. This helps us to later query graph using the generated queries by our translator model
 
-![Placeholder for an image depicting the process of finding answers using logic](image4.png)
+### Overal pipeline and experiments
 
-## Trying It Out
+![Pipeline of our approach](/aaai24.drawio.png)
 
-To make sure their idea worked, the researchers tried it out with a bunch of movie-related questions. And guess what? It worked pretty well! Even when they didn't give the computer a lot of examples to learn from, it still managed to get the answers right.
+Above picture shows the full pipeline of our approach as described above. For more details refer to the [original paper](https://openreview.net/pdf?id=ohixFcMzEr). We found that using this simple approach and by using a very limited number of training samples we can train a model that fully solves this dataset. To be more specific, using a T5-small model and only 1000 training samples our model learns to answer all of the questions in the test dataset. 
 
-![Placeholder for an image showing the success of the method with various movie-related questions](image5.png)
 
-## What's Next?
 
-This is just the beginning. Right now, they've focused on movie questions, but this could be used for all sorts of topics. The goal is to make computers understand us better, no matter how complicated our questions are.
 
-![Placeholder for an image envisioning the future possibilities of this research](image6.png)
-
-So, there you have it—a super cool way to make computers get us better, all thanks to a bit of logic and some smart thinking by the researchers. Pretty neat, huh?
 

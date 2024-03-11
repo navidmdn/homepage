@@ -12,7 +12,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["blog", "posts", "papermod"]
+mainsections: ["publications", "blog", "posts", "papermod"]
 # googleAnalytics: UA-123-45
 
 minify:
