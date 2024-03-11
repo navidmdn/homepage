@@ -1,6 +1,6 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
+baseURL: "http://navidmdn.github.io/"
 title: Navid Madani
 paginate: 5
 theme: PaperMod
@@ -12,7 +12,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+mainsections: ["blog", "posts", "papermod"]
 # googleAnalytics: UA-123-45
 
 minify:
@@ -29,7 +29,13 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
+        - name: Publications
+          url: publications
+          weight: 5
+        - name: Blog
+          url: blog
+          weight: 5
+        - name: Archives
           url: archives
           weight: 5
         - name: Search
@@ -131,7 +137,7 @@ params:
   images: ["images/papermod-cover.png"]
 
   profileMode:
-    enabled: true
+    enabled: false
     title: Navid Madani
     imageUrl: "images/personal-sq.png"
     imageTitle: my image
@@ -145,15 +151,9 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    Title: "Welcome!"
     Content: >
-      👋 Welcome to demo page of Hugo's theme PaperMod!
-
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
-
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
-
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+      I am Navid Madani, a passionate AI enthusiast at the University at Buffalo and a former Machine Learning Engineer at Tapsi Co. I hold a BSc in Software Engineering from the University of Tehran and am currently pursuing my PhD. My focus is on advancing Artificial Intelligence to achieve more than mere conversation; my aim is to develop AI that truly communicates, building engaging conversational agents through rich, meaningful, and extended dialogues with the help of LLMs. This involves not just programming responses but designing intricate causal models and integrating human-centric psychological strategies. My goal is to create AI interactions that are as engaging and personal as a conversation over coffee with a close friend, making digital communication warm and empathetic. Join me on this intriguing journey to redefine the boundaries of dialogue systems.
 
   socialIcons:
     - name: github
