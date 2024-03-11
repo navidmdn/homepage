@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://navidmdn.github.io/sitemap.xml

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Navid Madani</title>
+    <link>http://navidmdn.github.io/tags/</link>
+    <description>Recent content in Tags on Navid Madani</description>
+    <image>
+      <title>Navid Madani</title>
+      <url>http://navidmdn.github.io/images/papermod-cover.png</url>
+      <link>http://navidmdn.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://navidmdn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KGQA</title>
+      <link>http://navidmdn.github.io/tags/kgqa/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://navidmdn.github.io/tags/kgqa/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
