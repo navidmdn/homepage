@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://navidmdn.github.io/publications/kgqa-aaai24/</loc>
+    <loc>//localhost:1313/publications/kgqa-aaai24/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://navidmdn.github.io/tags/kgqa/</loc>
+    <loc>//localhost:1313/tags/kgqa/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://navidmdn.github.io/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://navidmdn.github.io/publications/</loc>
+    <loc>//localhost:1313/publications/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://navidmdn.github.io/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://navidmdn.github.io/archives.fr/</loc>
+    <loc>//localhost:1313/archives.fr/</loc>
   </url><url>
-    <loc>http://navidmdn.github.io/archives/</loc>
+    <loc>//localhost:1313/archives/</loc>
   </url><url>
-    <loc>http://navidmdn.github.io/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://navidmdn.github.io/search/</loc>
+    <loc>//localhost:1313/search/</loc>
   </url><url>
-    <loc>http://navidmdn.github.io/search.fr/</loc>
+    <loc>//localhost:1313/search.fr/</loc>
   </url><url>
-    <loc>http://navidmdn.github.io/series/</loc>
+    <loc>//localhost:1313/series/</loc>
   </url>
 </urlset>
