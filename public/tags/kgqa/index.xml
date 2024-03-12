@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>KGQA on Navid Madani</title>
-    <link>//localhost:1313/tags/kgqa/</link>
+    <link>http://localhost:1313/tags/kgqa/</link>
     <description>Recent content in KGQA on Navid Madani</description>
     <image>
       <title>Navid Madani</title>
-      <url>//localhost:1313/images/papermod-cover.png</url>
-      <link>//localhost:1313/images/papermod-cover.png</link>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/kgqa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/kgqa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enhancing Domain-Specific Question Answering with Logical Programming and Large Language Models</title>
-      <link>//localhost:1313/publications/kgqa-aaai24/</link>
+      <link>http://localhost:1313/publications/kgqa-aaai24/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publications/kgqa-aaai24/</guid>
+      <guid>http://localhost:1313/publications/kgqa-aaai24/</guid>
       <description>Making Computers Understand Us Better: A Cool Trick with Questions and Answers Over Knowledge Graphs Ever wondered it is not the responsibility of the LLM to come up with the reasoning and it might be better for the LLM to only understand the linguistic side of the question? This work tries to explore this aspect by separating reasoning from linguistics of the knowledge graph question answering task. In this work we show that following this idea and using a T5-small model and only 1000 samples of MetaQA dataset (less than 0.</description>
     </item>
   </channel>
