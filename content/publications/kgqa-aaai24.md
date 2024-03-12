@@ -13,13 +13,12 @@ Ever wondered it is not the responsibility of the LLM to come up with the reason
 
  For more details, find the paper and code here:
 
-
 <div align="center">
 	<a href="https://github.com/navidmdn/logic_based_qa">
-	    <img src="/images/github-mark.png" width="40" height="40" alt="GitHub">
+	    <img src="/homepage/images/github-mark.png" width="40" height="40" alt="Github">
 	</a>
 	<a href="https://openreview.net/pdf?id=ohixFcMzEr">
-	    <img src="/images/paper.png" width="40" height="40" alt="Paper">
+	    <img src="/homepage/images/paper.png" width="40" height="40" alt="Paper">
 	</a>
 </div>
 
@@ -41,7 +40,7 @@ We represented the whole graph using Prolog language and constructed predicates 
 
 ### Overal pipeline and experiments
 
-![Pipeline of our approach](/images/aaai24.drawio.png)
+![Pipeline of our approach](/homepage/images/aaai24.drawio.png)
 
 Above picture shows the full pipeline of our approach as described above. For more details refer to the [original paper](https://openreview.net/pdf?id=ohixFcMzEr). We found that using this simple approach and by using a very limited number of training samples we can train a model that fully solves this dataset. To be more specific, using a T5-small model and only 1000 training samples our model learns to answer all of the questions in the test dataset. 
 

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Navid Madani</title>
-    <link>http://localhost:1313/homepage/tags/</link>
+    <link>https://navidmdn.github.io/homepage/tags/</link>
     <description>Recent content in Tags on Navid Madani</description>
     <image>
       <title>Navid Madani</title>
-      <url>http://localhost:1313/homepage/images/papermod-cover.png</url>
-      <link>http://localhost:1313/homepage/images/papermod-cover.png</link>
+      <url>https://navidmdn.github.io/homepage/images/papermod-cover.png</url>
+      <link>https://navidmdn.github.io/homepage/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/homepage/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://navidmdn.github.io/homepage/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KGQA</title>
-      <link>http://localhost:1313/homepage/tags/kgqa/</link>
+      <link>https://navidmdn.github.io/homepage/tags/kgqa/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/homepage/tags/kgqa/</guid>
+      <guid>https://navidmdn.github.io/homepage/tags/kgqa/</guid>
       <description></description>
     </item>
   </channel>
