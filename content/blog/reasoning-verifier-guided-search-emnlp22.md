@@ -68,6 +68,17 @@ where each node in the tree corresponds to an argument or a rule and the root of
 
 ![NLProofS](/homepage/images/nlproofs.png)
 
+## Task definitions
+
+#### Task 1 (No-distractor)
+In this simplest form, the task provides the model with a hypothesis and a set of supporting facts that are precisely the leaf nodes required to construct the ground truth proof tree. There are no extra or irrelevant pieces of information (distractors), meaning each provided fact directly contributes to proving the hypothesis. This task assesses the model's ability to generate coherent proofs when all necessary information is straightforward and directly available.
+
+#### Task 2 (Distractor)
+This task increases complexity by introducing distractors alongside the supporting facts. The model is given a hypothesis and a set of 25 sentences that includes both the relevant facts needed for the proof and additional irrelevant or misleading facts (distractors). The model's challenge is to sift through this mixed information, identify the relevant facts, and construct a logical proof for the hypothesis, demonstrating its capability to focus on pertinent information amidst potential noise.
+
+#### Task 3 (Full-corpus)
+The most challenging scenario, Task 3, requires the model to engage in a form of information retrieval alongside proof generation. The model is presented with a hypothesis and a large corpus containing thousands of sentences, from which it must first identify and retrieve relevant supporting facts before generating the proof. This task simulates a more realistic scenario where the model must navigate extensive information sources, akin to real-world reasoning and research tasks, to find the facts necessary to construct a valid proof.
+
 ## Step-wise Prover
 
 At the core of NLProofS is a model which is responsible for generating proofs step by step. The first step in building 
@@ -75,4 +86,85 @@ the whole pipeline of their proposed system is to understand how we this compone
 with a T5 and Bart models to generate the proof steps. But first, let's understand the way they preprocess the data for
 fine-tuning these models.
 
-### 
+### Data Preparation
+
+Starting with the original EntailmentBank or RuleTaker datasets, the following steps are taken to prepare data for training the prover module. 
+We first process each example to a Proof objects defined in [`proof.py`](https://github.com/princeton-nlp/NLProofS/blob/main/prover/proof.py) file which contains
+a list of `ProofStep` objects each presenting a single step in the proof. Later in `__getitem__` method of the [`StepwiseDataset`](https://github.com/princeton-nlp/NLProofS/blob/main/prover/datamodule.py) class,
+the real data augmentation and filtering for building each example happens. For each of the training examples, the `get_example_train` is called. It first
+shuffles the proof context which only shuffles the identifiers of proof sentences (sent1, sent2 -> sent2, sent1). Then it uses the `to_tree` method defined
+inside the `Proof` class to convert the whole proof to a tree using `ete3` library. The following code is the full implementation of the `get_example_train` method at time
+of writing this post:
+
+```python 
+    def get_example_train(self, ex: Example) -> Example:
+        proof = ex["proof"].shuffle_context()
+
+        # Sample the proof step.
+        tree = proof.to_tree()
+        int_node = random.choice(get_internal_nodes(tree))
+
+        # Sample the goal.
+        if self.sample_goal == "hypothesis":
+            goal_node = tree.get_tree_root()
+        else:
+            assert self.sample_goal == "intermediates"
+            ancestors = int_node.get_ancestors()
+            assert int_node not in ancestors
+            ancestors.append(int_node)
+            goal_node = random.choice(ancestors)
+
+        # Sample the partial proof.
+        proved_subtrees = [node for node in int_node.children if not node.is_leaf()]
+        if int_node is not goal_node:
+            unproved_child = int_node
+            for node in int_node.iter_ancestors():
+                for child in node.children:
+                    if child is unproved_child or child.is_leaf():
+                        continue
+                    if self.subtree_proved_all_or_none:
+                        if random.random() < self.subtree_proved_prob:
+                            proved_subtrees.append(child)
+                    else:
+                        proved_subtrees.extend(
+                            collect_proved_subtrees(child, self.subtree_proved_prob)
+                        )
+                if node is goal_node:
+                    break
+                else:
+                    unproved_child = node
+        proved_subtrees.reverse()
+        random.shuffle(proved_subtrees)
+        partial_proof = " ".join(serialize(t) for t in proved_subtrees)
+
+        # goal_context
+        input_seq = f"$hypothesis$ = {goal_node.sent} ; $context$ = {proof.serialize_context()} ; $proof$ = {partial_proof}"
+
+        premises = [node.name for node in int_node.children]
+        random.shuffle(premises)
+        output_seq = " & ".join(premises)
+        if goal_node is int_node:
+            output_seq = output_seq + " -> hypothesis;"
+        else:
+            output_seq = output_seq + f" -> int: {int_node.sent};"
+
+        ex = deepcopy(ex)
+        ex["proof"] = proof
+        ex["input_seq"] = input_seq
+        ex["output_seq"] = output_seq
+        return ex
+```
+
+After building the tree we randomly sample an internal node of the tree and sample either an ancestor of the internal node or the hypothesis as the goal
+(it depends on the training config). Then we construct the partial proof as follow:
+- all the subtrees of current internal node must be in the partial proof
+- from the internal node up to the goal node, we randomly sample a subtree with a probability of `subtree_proved_prob` to have some level of data augmentation
+- we shuffle the subtrees and concatenate them to build the partial proof
+
+Finally, they build the input sequences for the model. The input sequence is built as follows:
+- the hypothesis is the goal node
+- the context is the proof context
+- the proof is the partial proof
+
+At each stage they use the [`serialize`](https://github.com/princeton-nlp/NLProofS/blob/main/common.py) method to convert the tree to a string.
+
