@@ -100,7 +100,7 @@ of writing this post:
     def get_example_train(self, ex: Example) -> Example:
         proof = ex["proof"].shuffle_context()
 
-        # Sample the proof step.
+        # Sample the pro[of step.
         tree = proof.to_tree()
         int_node = random.choice(get_internal_nodes(tree))
 
@@ -167,4 +167,18 @@ Finally, they build the input sequences for the model. The input sequence is bui
 - the proof is the partial proof
 
 At each stage they use the [`serialize`](https://github.com/princeton-nlp/NLProofS/blob/main/common.py) method to convert the tree to a string.
+
+### What can be improved?
+
+So the training procedure is a straightforward sequence to sequence training with a partial proof as input and the next proof step as output.
+However, we observe some data augmentation in which the model learns to only choose relevant information from the context to continue the proof.
+In my opinion we are only observing a class of positive samples here. That is, we are only learning to continue the proof from contexts in which
+there are sufficient information to continue the proof. As an example, what happens if the stepwise prover is given 
+two sentences `the dog is brown` and `the fox is red`? Maybe it helps the model to understand that the only logical continuation of
+such context is to `AND` the two sentences. This might be a good step in preventing wrong proof steps and reducing the load on the verifier.
+
+Another point to think about is what happens if the model is provided with context that allows multiple continuations. Since we are
+augmenting the context with irrelevant subtrees, it can introduce new paths to the proof or when we are dealing with multiple leaf nodes, there can be
+multiple continuations to build the tree for one step. However, we're giving them all to the model and ask it to provide a next step proof.
+These duplicate labels can be confusing for the model and can lead to a model that is not able to generalize well.
 
